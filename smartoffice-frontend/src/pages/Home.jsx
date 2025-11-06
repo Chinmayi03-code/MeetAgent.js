@@ -1,10 +1,8 @@
 import React from 'react'
-import Navbar from '../components/Navbar'
 
 export default function Home(){
   return (
     <div className="min-h-screen bg-gradient-to-b from-purple-50/60 via-white to-pink-50/40">
-      <Navbar />
 
       <main className="max-w-7xl mx-auto px-6 py-20">
         <div className="rounded-3xl overflow-hidden shadow-xl bg-gradient-to-br from-white/60 to-white/40">
