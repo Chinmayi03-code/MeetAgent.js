@@ -4,6 +4,8 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Home from './pages/Home'
 import Schedule from './pages/Schedule'
+import SignIn from './pages/SignIn'
+import SignUp from './pages/SignUp'
 import Dashboard from './pages/Dashboard'
 
 export default function App(){
@@ -14,6 +16,8 @@ export default function App(){
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/schedule" element={<Schedule />} />
+          <Route path="/signin" element={<SignIn />} />
+          <Route path="/signup" element={<SignUp />} />
           <Route path="/dashboard" element={<Dashboard />} />
         </Routes>
       </main>

@@ -21,7 +21,6 @@ function Logo(){
 const links = [
   {to: '/', label: 'Home'},
   {to: '/schedule', label: 'Schedule'},
-  {to: '/dashboard', label: 'Dashboard'},
 ]
 
 export default function Navbar(){
@@ -29,17 +28,25 @@ export default function Navbar(){
     <header className="w-full shadow-sm bg-white sticky top-0 z-40">
       <div className="container mx-auto px-6 py-4 flex items-center justify-between">
         <Logo />
-        <nav className="flex items-center gap-6">
-          {links.map(l => (
-            <NavLink 
-              key={l.to}
-              to={l.to}
-              end
-              className={({isActive}) => `px-4 py-2 rounded-md font-medium ${isActive ? 'text-white bg-gradient-to-r from-pink-500 to-purple-600 shadow' : 'text-gray-600 hover:text-gray-900'}`}>
-              {l.label}
-            </NavLink>
-          ))}
-        </nav>
+
+        <div className="flex items-center gap-6">
+          <nav className="hidden md:flex items-center gap-4">
+            {links.map(l => (
+              <NavLink 
+                key={l.to}
+                to={l.to}
+                end
+                className={({isActive}) => `px-3 py-2 rounded-md font-medium ${isActive ? 'text-white bg-gradient-to-r from-pink-500 to-purple-600 shadow' : 'text-gray-600 hover:text-gray-900'}`}>
+                {l.label}
+              </NavLink>
+            ))}
+          </nav>
+
+          <div className="flex items-center gap-3">
+            <NavLink to="/signin" className="px-4 py-2 rounded-md bg-white border text-sm font-medium text-gray-700 hover:bg-gray-50">Sign in</NavLink>
+            <NavLink to="/signup" className="px-4 py-2 rounded-md text-sm font-medium text-white bg-gradient-to-r from-pink-500 to-purple-600 shadow">Sign up</NavLink>
+          </div>
+        </div>
       </div>
     </header>
   )
