@@ -1,5 +1,6 @@
 import React from 'react'
 import FeatureCard from '../components/FeatureCard'
+//hi 
 
 export default function Home(){
   return (
