@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom small styles */
+:root{
+  --grad-from: #ff5fa2;
+  --grad-to: #7c3aed;
+}
+
+body{ @apply bg-white text-gray-800; }
+
+.gradient-btn{
+  background: linear-gradient(90deg,var(--grad-from),var(--grad-to));
+}
+
+.card-hover:hover{
+  transform: translateY(-6px);
+}
